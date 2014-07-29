@@ -10,3 +10,4 @@
 /// <reference path="respond.matchmedia.addlistener.js" />
 /// <reference path="app/app.js" />
 /// <reference path="app/controllers/index.js" />
+/// <reference path="app/controllers/edit.js" />

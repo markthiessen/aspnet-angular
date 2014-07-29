@@ -157,7 +157,9 @@
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\app\app.js" />
+    <Content Include="Scripts\app\controllers\edit.js" />
     <Content Include="Scripts\app\controllers\index.js" />
+    <Content Include="Scripts\app\views\edit.html" />
     <Content Include="Scripts\app\views\index.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

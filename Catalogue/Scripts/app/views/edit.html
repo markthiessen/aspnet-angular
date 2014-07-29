@@ -1,0 +1,24 @@
+﻿<div class="row">
+    <div class="col-sm-12">
+        <form name="editProduct" ng-submit="saveChanges()" novalidate>
+
+            <div class="form-group" ng-class="{'has-error' : editProduct.Name.$invalid}">
+                <label class="control-label">Product Name*</label>
+                <input type="text" class="form-control" name="Name" ng-model="product.Name" required>
+            </div>
+
+            <div class="form-group" ng-class="{'has-error' : editProduct.Price.$invalid}">
+                <label class="control-label">Price*</label>
+                <input type="text" class="form-control" name="Price" ng-model="product.Price" required>
+            </div>
+
+            <div class="form-group" ng-class="{'has-error' : editProduct.ReleaseDate.$invalid}">
+                <label class="control-label">Release Date*</label>
+                <input type="text" class="form-control" name="ReleaseDate" ng-model="product.ReleaseDate" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary pull-right" ng-disabled="editProduct.$invalid">Save</button>
+            <a href="#/" class="btn btn-default pull-right">Cancel</a>
+        </form>
+    </div>
+</div>
