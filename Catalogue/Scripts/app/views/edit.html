@@ -12,11 +12,11 @@
                 <input type="text" class="form-control" name="Price" ng-model="product.Price" required>
             </div>
 
-            <div class="form-group" ng-class="{'has-error' : editProduct.ReleaseDate.$invalid}">
-                <label class="control-label">Release Date*</label>
-                <input type="text" class="form-control" name="ReleaseDate" ng-model="product.ReleaseDate" required>
+            <div class="form-group" ng-class="{'has-error' : editProduct.LastModified.$invalid}">
+                
             </div>
-
+            <label>Last Modified</label>
+            <span class="form-control-static">{{product.LastModified | date}}</span>
             <button type="submit" class="btn btn-primary pull-right" ng-disabled="editProduct.$invalid">Save</button>
             <a href="#/" class="btn btn-default pull-right">Cancel</a>
         </form>

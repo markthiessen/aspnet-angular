@@ -1,4 +1,4 @@
-﻿angular.module('CatalogueApp', ['ngRoute', 'ngResource'])
+﻿angular.module('CatalogueApp', ['ngRoute', 'ngResource', 'ngAnimate'])
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider
            .when('/', {
@@ -13,3 +13,4 @@
                 redirectTo: '/'
             });
     }]);
+

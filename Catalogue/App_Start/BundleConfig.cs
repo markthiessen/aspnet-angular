@@ -22,7 +22,7 @@ namespace Catalogue
 
             bundles.Add(new ScriptBundle("~/bundles/angularjs").Include(
                       "~/Scripts/angular.js",
-                      "~/Scripts/angular-route.js", "~/Scripts/angular-resource.js"));
+                      "~/Scripts/angular-route.js", "~/Scripts/angular-resource.js", "~/Scripts/angular-animate.js"));
 
             //include all javascript in our app directory, recurse through folders
             bundles.Add(new ScriptBundle("~/bundles/app").IncludeDirectory("~/Scripts/app", "*.js", true));

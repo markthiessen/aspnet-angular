@@ -11,9 +11,9 @@ namespace Catalogue.Controllers
     public class ProductsController : ApiController
     {
         private static List<Product> Products = new List<Product>{
-            new Product{Id = 1, Name = "XBox One", ReleaseDate = DateTime.Now.AddDays(3), Price = 599.99m},
-            new Product{Id = 2, Name = "PlayStation 4", ReleaseDate = DateTime.Now.AddDays(3), Price = 499.99m},
-            new Product{Id = 3, Name = "Wii U", ReleaseDate = DateTime.Now.AddDays(1), Price = 299.99m},
+            new Product{Id = 1, Name = "XBox One", LastModified = DateTime.Now.AddDays(-2), Price = 599.99m},
+            new Product{Id = 2, Name = "PlayStation 4", LastModified = DateTime.Now.AddDays(-5), Price = 499.99m},
+            new Product{Id = 3, Name = "Wii U", LastModified = DateTime.Now.AddDays(-10), Price = 299.99m},
         };
 
 
@@ -40,7 +40,7 @@ namespace Catalogue.Controllers
             {
                 existing.Name = value.Name;
                 existing.Price = value.Price;
-                existing.ReleaseDate = value.ReleaseDate;
+                existing.LastModified = DateTime.Now;
                 return existing;
             }
             return null;

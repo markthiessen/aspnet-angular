@@ -6,14 +6,14 @@
                 <tr>
                     <th>Name</th>
                     <th>Price</th>
-                    <th>Release Date</th>
+                    <th>Last Modified</th>
                 </tr>
             </thead>
             <tbody>
                 <tr ng-repeat="product in products">
                     <td><a href="#/products/{{product.Id}}">{{product.Name}}</a></td>
                     <td>{{product.Price}}</td>
-                    <td>{{product.ReleaseDate | date}}</td>
+                    <td>{{product.LastModified | date}}</td>
                 </tr>
             </tbody>
         </table>
