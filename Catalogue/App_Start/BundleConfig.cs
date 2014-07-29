@@ -24,13 +24,16 @@ namespace Catalogue
                       "~/Scripts/angular.js",
                       "~/Scripts/angular-route.js", "~/Scripts/angular-resource.js"));
 
+            //include all javascript in our app directory, recurse through folders
+            bundles.Add(new ScriptBundle("~/bundles/app").IncludeDirectory("~/Scripts/app", "*.js", true));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
 
             // Set EnableOptimizations to false for debugging. For more information,
             // visit http://go.microsoft.com/fwlink/?LinkId=301862
-            BundleTable.EnableOptimizations = true;
+            //BundleTable.EnableOptimizations = true;
         }
     }
 }
