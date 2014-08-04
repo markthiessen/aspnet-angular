@@ -12,3 +12,4 @@
 /// <reference path="app/controllers/index.js" />
 /// <reference path="app/controllers/edit.js" />
 /// <reference path="angular-animate.min.js" />
+/// <reference path="app/directives/loader.js" />

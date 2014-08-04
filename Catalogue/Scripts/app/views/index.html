@@ -1,5 +1,10 @@
 ﻿<div class="row">
     <div class="col-sm-12">
+        <a href="#/products/edit" class="btn btn-primary pull-right">New</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
 
         <table class="table table-striped">
             <thead>
@@ -10,13 +15,14 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="product in products">
+                <tr ng-repeat="product in products" class="product">
                     <td><a href="#/products/{{product.Id}}">{{product.Name}}</a></td>
                     <td>{{product.Price}}</td>
                     <td>{{product.LastModified | date}}</td>
                 </tr>
             </tbody>
         </table>
+        <div loader ng-show="products.length==0"></div>
 
     </div>
 </div>

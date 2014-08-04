@@ -16,13 +16,13 @@ namespace Catalogue.Models
 
         public IEnumerable<Product> GetAll()
         {
-            Thread.Sleep(500);//simulate some latency since we're local & fetching everything in memory
+            //Thread.Sleep(250);//simulate some latency since we're local & fetching everything in memory
             return Products;
         }
 
         public Product Get(int id)
         {
-            Thread.Sleep(500);//simulate some latency since we're local & fetching everything in memory
+            //Thread.Sleep(500);//simulate some latency since we're local & fetching everything in memory
             return Products.FirstOrDefault(p => p.Id == id);
         }
 
