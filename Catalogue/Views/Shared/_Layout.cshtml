@@ -8,30 +8,10 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body ng-app="CatalogueApp">
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Catalogue", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="#/products" data-toggle="collapse" data-target=".navbar-collapse">Products</a></li>
-                    <li><a href="#/products/new" data-toggle="collapse" data-target=".navbar-collapse">Add New</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    @Html.Partial("_Nav")
+
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My Simple Catalogue</p>
-        </footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")

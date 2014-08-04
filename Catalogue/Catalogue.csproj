@@ -171,6 +171,7 @@
     <Content Include="Content\Site.css.map">
       <DependentUpon>Site.css</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\simplecatalogue.pubxml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\app\app.js" />
@@ -178,7 +179,7 @@
     <Content Include="Scripts\app\controllers\edit.js" />
     <Content Include="Scripts\app\controllers\index.js" />
     <Content Include="Scripts\app\directives\loader.js" />
-    <Content Include="Scripts\app\directives\_loader.html" />
+    <Content Include="Scripts\app\directives\number.js" />
     <Content Include="Scripts\app\views\edit.html" />
     <Content Include="Scripts\app\views\index.html" />
     <Content Include="Scripts\bootstrap.js" />
@@ -208,6 +209,7 @@
     <Content Include="Views\Products\Index.cshtml" />
     <Content Include="Views\Products\Edit.cshtml" />
     <Content Include="Views\Products\New.cshtml" />
+    <Content Include="Views\Shared\_Nav.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

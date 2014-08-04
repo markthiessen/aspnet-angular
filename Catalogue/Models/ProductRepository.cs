@@ -16,7 +16,7 @@ namespace Catalogue.Models
 
         public IEnumerable<Product> GetAll()
         {
-            //Thread.Sleep(250);//simulate some latency since we're local & fetching everything in memory
+            Thread.Sleep(1000);//simulate some latency since we're local & fetching everything in memory
             return Products;
         }
 
