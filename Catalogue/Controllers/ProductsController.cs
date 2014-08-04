@@ -1,49 +1,55 @@
-﻿using System;
+﻿using Catalogue.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
-using Catalogue.Models;
+using System.Threading;
+using System.Web;
+using System.Web.Mvc;
 
 namespace Catalogue.Controllers
 {
-    public class ProductsController : ApiController
+    public class ProductsController : Controller
     {
-        private static List<Product> Products = new List<Product>{
-            new Product{Id = 1, Name = "XBox One", LastModified = DateTime.Now.AddDays(-2), Price = 599.99m},
-            new Product{Id = 2, Name = "PlayStation 4", LastModified = DateTime.Now.AddDays(-5), Price = 499.99m},
-            new Product{Id = 3, Name = "Wii U", LastModified = DateTime.Now.AddDays(-10), Price = 299.99m},
-        };
-
-
-        public IEnumerable<Product> Get()
+        // GET: Products
+        public ActionResult Index()
         {
-            return Products;
+            return View(new ProductRepository().GetAll());
         }
 
-        public Product Get(int id)
+        public ActionResult Edit(int id)
         {
-            return Products.FirstOrDefault(p=>p.Id==id);
+            var product = new ProductRepository().Get(id);
+            if(product==null)
+                return RedirectToAction("Index");
+
+            return View(product);
         }
 
-        public Product Post([FromBody]Product value)
+        [HttpPost]
+        public ActionResult Edit(Product product)
         {
-            if (value.Id == 0)//new
+            if (ModelState.IsValid)
             {
-                value.Id = Products.Count;
-                Products.Add(value);
-                return value;
+                new ProductRepository().AddOrUpdate(product);
+                return RedirectToAction("Index");
             }
-            var existing = Get(value.Id);
-            if (existing != null)//update
+            return View(product);
+        }
+
+        public ActionResult New()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult New(Product product)
+        {
+            if (ModelState.IsValid)
             {
-                existing.Name = value.Name;
-                existing.Price = value.Price;
-                existing.LastModified = DateTime.Now;
-                return existing;
+                new ProductRepository().AddOrUpdate(product);
+                return new RedirectResult("Index");
             }
-            return null;
+            return View(product);
         }
     }
 }
