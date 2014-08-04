@@ -2,35 +2,27 @@
     padding-top: 50px;
     padding-bottom: 20px;
 }
-
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+h2{
+    margin-top:0;
 }
 
 .btn-primary {
     margin-left: 5px;
 }
-
-
-
-
+.container{
+    position:relative;
+}
 
 
 
 /* ANIMATIONS
 ============================================================================= */
 
-.page {
-    margin-top: 50px;
-}
-
 div[ng-view].ng-enter {
-    -webkit-animation: bounceInUp 0.8s;
-    -moz-animation: bounceInUp 0.8s;
-    -o-animation: bounceInUp 0.8s;
-    animation: bounceInUp 0.8s;
+    -webkit-animation: bounceInUp 1s;
+    -moz-animation: bounceInUp 1s;
+    -o-animation: bounceInUp 1s;
+    animation: bounceInUp 1s;
 }
 
 div[ng-view].ng-enter.ng-enter-active {
@@ -50,6 +42,7 @@ div[ng-view].ng-leave {
 div[ng-view].ng-leave.ng-leave-active{
     position:absolute;
     width:100%;
+    box-sizing:border-box;
 }
 
 

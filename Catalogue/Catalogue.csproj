@@ -174,6 +174,7 @@
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\app\app.js" />
+    <Content Include="Scripts\app\controllers\new.js" />
     <Content Include="Scripts\app\controllers\edit.js" />
     <Content Include="Scripts\app\controllers\index.js" />
     <Content Include="Scripts\app\directives\loader.js" />
