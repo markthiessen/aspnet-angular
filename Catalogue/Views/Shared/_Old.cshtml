@@ -7,21 +7,14 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body ng-app="CatalogueApp">
-    @Html.Partial("_Nav")
+<body>
 
     <div class="container body-content">
-
-        <!-- AngularJS will swap content in based on our route -->
-        <div ng-view class="page">    
-            @RenderBody()
-        </div>
+        @RenderBody()
     </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-    @Scripts.Render("~/bundles/angularjs")
-    @Scripts.Render("~/bundles/app")
     @RenderSection("scripts", required: false)
 </body>
 </html>
