@@ -3,10 +3,10 @@
         function () {
             return {
                 restrict: 'EA',
-                template: function (tElement, tAttrs) {
+                template: function (element, attributes) {
                     return '<div class="loader">'
                             + '<span class="text">'
-                                + (tAttrs.loaderText || 'Loading')
+                                + (attributes.loaderText || 'Loading')
                             + '</span>'
                             + '<span class="l-1"></span>'
                             + '<span class="l-2"></span>'

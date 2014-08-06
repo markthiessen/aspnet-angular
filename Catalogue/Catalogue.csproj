@@ -181,6 +181,7 @@
     <Content Include="Scripts\app\controllers\index.js" />
     <Content Include="Scripts\app\directives\loader.js" />
     <Content Include="Scripts\app\directives\number.js" />
+    <Content Include="Scripts\app\directives\hideOnMouseover.js" />
     <Content Include="Scripts\app\views\edit.html" />
     <Content Include="Scripts\app\views\index.html" />
     <Content Include="Scripts\bootstrap.js" />

@@ -13,7 +13,7 @@
             <tbody>
                 <tr ng-repeat="product in products" class="product">
                     <td><a href="#/products/{{product.Id}}">{{product.Name}}</a></td>
-                    <td>{{product.Price}}</td>
+                    <td>{{product.Price | currency}}</td>
                     <td>{{product.LastModified | date}}</td>
                 </tr>
             </tbody>

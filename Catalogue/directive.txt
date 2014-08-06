@@ -1,4 +1,17 @@
-﻿angular.module('CatalogueApp').directive('hoverBackground',
+﻿angular.module('CatalogueApp').directive('hideOnMouseover', [
+    function () {
+        return {
+            restrict: 'A',
+            link: function (scope, element, attributes) {
+                element.bind('mouseover', function () {
+                    angular.element(this).hide();
+                });
+            }
+        };
+    }
+]);
+
+angular.module('CatalogueApp').directive('hoverBackground',
     [
         function () {
             return {
@@ -14,4 +27,31 @@
             };
         }
     ]);
+
+	angular.module('CatalogueApp').directive('peek',
+    [
+        function () {
+            return {
+                restrict: 'A',
+                link: function ($scope, elm, attrs) {
+
+                    elm.bind('mouseover', function () {
+                        elm.css({ background: 'inherit' });
+                        elm.children().show();
+                    });
+
+                    elm.bind('mouseout', hide);
+
+                    function hide() {
+                        elm.css({ background: 'black' });
+                        elm.children().hide();
+                    }
+
+                    hide();
+                }
+            };
+        }
+    ]);
+
+
 

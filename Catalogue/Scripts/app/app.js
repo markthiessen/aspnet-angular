@@ -5,13 +5,13 @@
                templateUrl: '/Scripts/app/views/index.html',
                controller: 'IndexCtrl'
            })
-            .when('/products/:id', {
-                templateUrl: '/Scripts/app/views/edit.html',
-                controller: 'EditCtrl'
-            })
             .when('/products/new', {
                 templateUrl: '/Scripts/app/views/edit.html',
                 controller: 'NewCtrl'
+            })
+            .when('/products/:id', {
+                templateUrl: '/Scripts/app/views/edit.html',
+                controller: 'EditCtrl'
             })
             .otherwise({
                 redirectTo: '/'
