@@ -16,16 +16,22 @@ namespace Catalogue.Controllers.Api
             _productRepository = new ProductRepository();
         }
 
+
+        // GET request for all the products - ie.  /api/Products
         public IEnumerable<Product> Get()
         {
             return _productRepository.GetAll();
         }
 
+        // GET request for a specific product - ie. /api/Products/1
         public Product Get(int id)
         {
             return _productRepository.Get(id);
         }
 
+
+        // POST request to add a new product or update an existing one
+        // product properties are fetched from the request body
         public Product Post([FromBody]Product value)
         {
             _productRepository.AddOrUpdate(value);

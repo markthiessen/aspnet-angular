@@ -178,6 +178,7 @@
     <Content Include="Scripts\app\controllers\new.js" />
     <Content Include="Scripts\app\controllers\edit.js" />
     <Content Include="Scripts\app\controllers\index.js" />
+    <Content Include="Scripts\app\directives\hoverRed.js" />
     <Content Include="Scripts\app\directives\loader.js" />
     <Content Include="Scripts\app\directives\number.js" />
     <Content Include="Scripts\app\views\edit.html" />

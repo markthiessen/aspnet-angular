@@ -1,0 +1,17 @@
+﻿angular.module('CatalogueApp').directive('hoverBackground',
+    [
+        function () {
+            return {
+                restrict: 'A',
+                link: function ($scope, elm, attrs) {
+                    elm.bind('mouseover', function () {
+                        angular.element(this).css({ background: attrs.hoverBackground });
+                    });
+                    elm.bind('mouseout', function () {
+                        angular.element(this).css({ background: 'none' });
+                    });
+                }
+            };
+        }
+    ]);
+

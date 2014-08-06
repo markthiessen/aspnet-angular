@@ -1,21 +1,24 @@
 ﻿angular.module('CatalogueApp').directive('loader',
     [
-        function(){
+        function () {
             return {
                 restrict: 'EA',
-                template: '<div class="loader">'
-                            +'<span class="text">Loading</span>'
-                            +    '<span class="l-1"></span>'
-                            +    '<span class="l-2"></span>'
-                            +    '<span class="l-3"></span>'
-                            +    '<span class="l-4"></span>'
-                            +    '<span class="l-5"></span>'
-                            +    '<span class="l-6"></span>'
-                            +'</div>',
+                template: function (tElement, tAttrs) {
+                    return '<div class="loader">'
+                            + '<span class="text">'
+                                + (tAttrs.loaderText || 'Loading')
+                            + '</span>'
+                            + '<span class="l-1"></span>'
+                            + '<span class="l-2"></span>'
+                            + '<span class="l-3"></span>'
+                            + '<span class="l-4"></span>'
+                            + '<span class="l-5"></span>'
+                            + '<span class="l-6"></span>'
+                            + '</div>';
+                },
                 replace: true,
                 link: function ($scope, elm, attrs) {
-                    if(attrs.loaderText)
-                        elm.find('.text').text(attrs.loaderText);
+                    //if we wanted to add some listeners here we could...
                 }
             };
         }
